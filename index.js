@@ -43,3 +43,9 @@ smoothLinks.forEach(function (el) {
 });
 
 console.log("welcome");
+
+const newFeautre = function () {
+  console.log("welcome to our web site");
+};
+
+newFeautre();
