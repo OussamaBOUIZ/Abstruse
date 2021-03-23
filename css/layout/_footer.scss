@@ -1,0 +1,87 @@
+footer {
+  background-color: rgba($color-lightBrown, 0.5);
+  padding: 5rem 6rem 0;
+  color: $color-Blue;
+  @include respond(768px) {
+    padding: 10rem 8rem 0;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5rem;
+    @include respond(600px) {
+      flex-direction: column;
+    }
+    .logo {
+      transform: scale(1.5);
+      margin-top: 2rem;
+      @include respond(600px) {
+        margin-top: 10rem;
+      }
+      @include respond(432px) {
+        margin: 10rem;
+      }
+      .logo-shape {
+        padding: 0;
+      }
+    }
+    ul {
+      list-style: none;
+      @include respond(600px) {
+        margin: 5rem auto;
+        text-align: center;
+      }
+      li {
+        margin-bottom: 2rem;
+        a {
+          font-size: 1.4rem;
+          font-family: $font-primary;
+          @include respond(768px) {
+            font-size: 2rem;
+          }
+          @include respond(600px) {
+            font-size: 3.5rem;
+          }
+          @include respond(320px) {
+            font-size: 7rem;
+          }
+          &:hover {
+            color: rgba($color-lightBrown, 0.7);
+          }
+        }
+      }
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: $font-open;
+    word-spacing: 1rem;
+    padding: 2rem;
+    background-color: $color-lightBeige;
+    @include respond(768px) {
+      font-size: 2.3rem;
+    }
+    @include respond(600px) {
+      font-size: 2.8rem;
+    }
+    @include respond(320px) {
+      font-size: 4rem;
+    }
+    a {
+      text-decoration: none;
+      color: $color-Blue;
+      font-size: 1.5rem;
+      @include respond(768px) {
+        font-size: 2.5rem;
+      }
+      @include respond(600px) {
+        font-size: 3rem;
+      }
+      @include respond(432px) {
+        font-size: 5.8rem;
+      }
+    }
+  }
+}

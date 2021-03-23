@@ -1,0 +1,219 @@
+header.header {
+  padding: 0 3rem 0;
+  // height: 65.7rem; //to be changed to 100vh
+  background: linear-gradient(to right top, rgba($white, 0), $color-lightBeige),
+    url("../img/hero-large.jpg");
+  background-size: cover;
+  background-position-y: 20%;
+  background-repeat: no-repeat;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  @include respond(768px) {
+    height: 570px; // to be changed to something else
+    background-image: linear-gradient(
+        to bottom,
+        $color-lightBeige,
+        rgba($color-lightBeige, 0.8),
+        rgba($white, 0)
+      ),
+      url("../img/hero-large.jpg");
+    background-position-x: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  @include respond(432px) {
+    background-position-x: 70%;
+  }
+  .topOfHeader {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 0.02rem solid rgba($black, 0.08);
+    @include respond(768px) {
+      padding: 2rem;
+    }
+  }
+  .navbar {
+    @include respond(432px) {
+      margin-right: 4rem;
+    }
+    &__items {
+      display: inline-block;
+      padding: 2rem;
+      &--link {
+        &,
+        &:link,
+        &:visited {
+          display: block;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: $color-darkBlue;
+          font-family: $font-primary;
+          font-size: 1.4rem;
+          transition: all 0.3s;
+          backface-visibility: hidden;
+          @include respond(768px) {
+            font-size: 2rem;
+          }
+          @include respond(600px) {
+            font-size: 2.5rem;
+          }
+          @include respond(432px) {
+            font-size: 3rem;
+          }
+          @include respond(320px) {
+            font-size: 4.5rem;
+          }
+        }
+        &:hover,
+        &:active {
+          color: rgba($color-darkBlue, 0.5);
+        }
+        &-contact {
+          &:link,
+          &:visited {
+            background-color: $color-royalBlue;
+            padding: 1rem;
+            border-radius: 0.6rem;
+            color: $color-lightBeige;
+          }
+          &:hover,
+          &:active {
+            background-color: rgba($color-royalBlue, 0.5);
+          }
+        }
+      }
+    }
+  }
+
+  //THE MAIN OF THE HEADER//////////////////////////////////////
+  .mainOfHeader {
+    padding: 6rem 8rem;
+    & > div,
+    a {
+      @include respond(768px) {
+        text-align: center;
+      }
+    }
+    .main-heading {
+      margin-left: 5rem;
+      font-size: 7rem;
+      font-family: $font-primary;
+      letter-spacing: 0.2rem;
+      color: rgba($color-darkBlue, 0.8);
+      @include respond(768px) {
+        font-size: 10rem;
+      }
+      @include respond(600px) {
+        font-size: 13rem;
+      }
+      @include respond(432px) {
+        font-size: 16rem;
+      }
+      &-2 {
+        color: rgba($color-royalBlue, 0.7);
+        font-size: 5.5rem;
+        @include respond(768px) {
+          font-size: 8rem;
+        }
+        @include respond(600px) {
+          font-size: 10rem;
+        }
+        @include respond(432px) {
+          font-size: 14rem;
+        }
+      }
+    }
+
+    // HEADING ANIMATIONS-------(JQUERY)*(CSS)
+    // .animate-heading {
+    //   &-1 {
+    //     animation: moveLeft 0.8s ease-out;
+    //     opacity: 1;
+    //   }
+    //   &-2 {
+    //     animation: moveRight 0.8s ease-out;
+    //     opacity: 1;
+    //   }
+    //   &-3 {
+    //     animation: moveLeft 0.8s ease-out;
+    //     opacity: 1;
+    //   }
+    // }
+
+    &-text {
+      margin-top: 3.5rem;
+      line-height: 1.5;
+      margin-left: 5rem;
+      font-size: 1.9rem;
+      font-family: $font-primary;
+      color: rgba($color-darkBlue, 0.8);
+      @include respond(768px) {
+        font-size: 2.4rem;
+      }
+      @include respond(600px) {
+        font-size: 3rem;
+      }
+      @include respond(432px) {
+        font-size: 4.8rem;
+      }
+      // &-animate {
+      //   animation: moveUp 0.8s ease-out;
+      //   opacity: 1;
+      // }
+
+      // animation: moveUp 2.8s ease-out;
+    }
+    &-btn {
+      &,
+      &:link,
+      &:visited {
+        margin-top: 2.5rem;
+        margin-left: 5rem;
+        display: inline-block;
+        text-decoration: none;
+        padding: 1.3rem 1.6rem;
+        // border-radius: 1rem;
+        background: linear-gradient(
+          to right bottom,
+          rgba($color-royalBlue, 1),
+          rgba($color-royalBlue, 0.3)
+        );
+        color: $white;
+        font-size: 1.6rem;
+        font-family: $font-secondary;
+        transition: all 0.2s;
+        @include respond(768px) {
+          display: block;
+          width: 25%;
+          margin: 3rem auto;
+          font-size: 2rem;
+        }
+        @include respond(600px) {
+          font-size: 2.4rem;
+        }
+        @include respond(432px) {
+          font-size: 5.5rem;
+          width: 45%;
+          margin-top: 10rem;
+        }
+        @include respond(320px) {
+          font-size: 6rem;
+        }
+      }
+
+      &:hover {
+        background-color: rgba($color-royalBlue, 0.85);
+      }
+      // &-animate {
+      //   &,
+      //   &:link,
+      //   &:visited {
+      //     animation: moveUpHeadingBtn 0.8s ease-out;
+      //     opacity: 1;
+      //   }
+      // }
+    }
+  }
+}

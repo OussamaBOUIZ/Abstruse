@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,800;1,300;1,400&family=Montserrat:ital,wght@0,300;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/central.css" />
+
+    <script defer src="index.js"></script>
+    <title>Build</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="topOfHeader">
+        <div class="logo">
+          <div class="logo-shape">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li class="navbar__items">
+              <a href="#projects" class="navbar__items--link s-link"
+                >Projects</a
+              >
+            </li>
+            <li class="navbar__items">
+              <a
+                href="#contact"
+                class="navbar__items--link navbar__items--link-contact s-link"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- <div class="browse">
+          <input
+            autofocus
+            spellcheck="false"
+            type="text"
+            class="browse-input"
+            placeholder="search"
+          />
+
+          <button class="browse-btn">
+            <ion-icon name="search-outline" class="browse-icon"></ion-icon>
+          </button>
+        </div> -->
+      </div>
+      <!-- THE MAIN OF THE HEADER -->
+      <div class="mainOfHeader">
+        <div class="heading-container">
+          <h1 class="main-heading main-heading-1">Architecture</h1>
+          <h1 class="main-heading main-heading-2">With Abstruse</h1>
+          <h1 class="main-heading main-heading-3">Approach</h1>
+
+          <!-- <hr class="mainOfHeader-text-hr" /> -->
+          <p class="mainOfHeader-text">
+            We build architecture that speaks.<!--  We design frozen music. -->
+          </p>
+        </div>
+        <a href="#projects" class="mainOfHeader-btn s-link"
+          >See our work &rarr;</a
+        >
+      </div>
+    </header>
+    <!-- THE MAIN OF THE PAGE PARTS -->
+    <!-- ///////////////////////////////// -->
+    <hr class="section-seperator" />
+    <main class="main">
+      <!-- THE ABOUT SECTION  -->
+      <!-- /////////////////////////////// -->
+      <section class="about section-about">
+        <div class="about-box-1">
+          <h2 class="title">ABOUT US</h2>
+          <h1 class="title-sub">Make Your Ideas Concrete, Elegantly</h1>
+          <p class="paragraph">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+          <button class="about-box-1-btn">Learn more...</button>
+        </div>
+        <div class="about-box-2">
+          <div class="img item-1"></div>
+          <div class="item-2">
+            <div class="img item-2--1"></div>
+            <div class="img item-2--2"></div>
+          </div>
+          <div class="img item-3"></div>
+        </div>
+      </section>
+
+      <hr class="section-seperator" />
+
+      <section id="company">
+        <article class="company__stats">
+          <ul>
+            <li>
+              <strong>34</strong><br /><span
+                >loyal clients <br /><ion-icon name="people-outline"></ion-icon
+              ></span>
+            </li>
+            <li>
+              <strong>+56</strong><br /><span class="projects">
+                projects <br /><ion-icon name="business-outline"></ion-icon
+              ></span>
+            </li>
+            <li>
+              <strong>74</strong><br /><span
+                >Countries <br /><ion-icon name="globe-outline"></ion-icon
+              ></span>
+            </li>
+            <li>
+              <strong>$105M</strong><br /><span
+                >Total deals <br /><ion-icon name="cash-outline"></ion-icon
+              ></span>
+            </li>
+          </ul>
+        </article>
+        <article class="company__explore">
+          <h2>
+            See How We Performed More Than <span>56</span> Projects And Majorly
+            <span> Contributed</span> On Others.
+          </h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <button>Explore &rarr;</button>
+        </article>
+      </section>
+
+      <section id="projects">
+        <aside>
+          <h1>Our Recent Projects</h1>
+          <!-- ABSOLUTE POSITIONED LOGO  -->
+          <div class="logo">
+            <div class="logo-shape">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+            </div>
+          </div>
+        </aside>
+        <ul class="projects-names">
+          <li data-id="1" class="active-name">
+            Große<ion-icon
+              name="arrow-forward-outline"
+              class="active-arrow arrow-1"
+            ></ion-icon>
+          </li>
+          <li data-id="2">
+            Meravigliosa<ion-icon
+              name="arrow-forward-outline"
+              class="arrow-2"
+            ></ion-icon>
+          </li>
+          <li data-id="3">
+            Fantastika<ion-icon
+              name="arrow-forward-outline"
+              class="arrow-3"
+            ></ion-icon>
+          </li>
+          <li data-id="4">
+            Moderna<ion-icon
+              name="arrow-forward-outline"
+              class="arrow-4"
+            ></ion-icon>
+          </li>
+        </ul>
+        <figure>
+          <article id="article-1" class="active-article project-article">
+            <address>
+              <img src="img/projects-1.jpg" alt="Der Große" />
+              <div>
+                <h4>Der Große</h4>
+                <span
+                  ><ion-icon name="location-outline"></ion-icon>Leipzig,
+                  2020</span
+                >
+              </div>
+            </address>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto pariatur at a error ut necessitatibus. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Odio deleniti illo
+              nesciunt, quidem ea aspernatur fugiat laborum dicta soluta
+              excepturi in, tempore ab eum dolorem, asperiores vero aliquid unde
+              necessitatibus?
+            </p>
+          </article>
+          <article id="article-2" class="project-article">
+            <address>
+              <img src="img/projects-2.jpg" alt="Meravigliosa" />
+              <div>
+                <h4>Meravigliosa</h4>
+                <span
+                  ><ion-icon name="location-outline"></ion-icon>Turin,
+                  2020</span
+                >
+              </div>
+            </address>
+            <p>
+              Placerat orci nulla pellentesque dignissim enim sit amet
+              venenatis. Sed risus pretium quam vulputate dignissim suspendisse
+              in est.A arcu cursus vitae congue mauris. Sed blandit libero
+              volutpat Sed blandit libero volutpat.
+            </p>
+          </article>
+          <article id="article-3" class="project-article">
+            <address>
+              <img src="img/projects-3.jpg" alt="Den Fantastika" />
+              <div>
+                <h4>Den Fantastika</h4>
+                <span
+                  ><ion-icon name="location-outline"></ion-icon>Malmö,
+                  2019</span
+                >
+              </div>
+            </address>
+            <p>
+              Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Erat
+              pellentesque adipiscing commodo elit. Amet justo donec enim diam
+              vulputate ut consequat semper viverra nunc sed augue lacus nunc
+              sed augue lacus.
+            </p>
+          </article>
+          <article id="article-4" class="project-article">
+            <address>
+              <img src="img/projects-4.jpg" alt="La Moderna" />
+              <div>
+                <h4>La Moderna</h4>
+                <span
+                  ><ion-icon name="location-outline"></ion-icon>Barcelona,
+                  2018</span
+                >
+              </div>
+            </address>
+            <p>
+              Tortor posuere ac ut consequat semper viverra. Metus aliquam
+              eleifend mi in nulla posuere sollicitudin aliquam. Congue eu
+              consequat ac felis donec. Dolor sed viverra ipsum nunc aliquet
+              bibendum.
+            </p>
+          </article>
+        </figure>
+      </section>
+      <section id="contact">
+        <article>
+          <figure>
+            <h1>We'd love to hear from you.</h1>
+            <div class="art">
+              <div class="shape"></div>
+              <div class="shape dashed"></div>
+              <div class="shape"></div>
+              <div class="shape dashed"></div>
+            </div>
+          </figure>
+          <form>
+            <h2>Contact us</h2>
+            <div class="contact-group first-name">
+              <label for="contact">first name</label>
+              <input
+                type="text"
+                name="first name"
+                placeholder="Enter your first name"
+              />
+            </div>
+            <div class="contact-group last-name">
+              <label for="contact">last name</label>
+              <input
+                type="text"
+                name="last name"
+                placeholder="Enter your last name"
+              />
+            </div>
+            <div class="contact-group email">
+              <label for="contact">email</label>
+              <input type="email" name="email" placeholder="Enter your Email" />
+            </div>
+            <div class="contact-group phone">
+              <label for="contact">phone number</label>
+              <input
+                type="text"
+                name="phone number"
+                placeholder="Phone number"
+              />
+            </div>
+            <div class="contact-group message">
+              <label for="contact">message</label>
+              <input
+                type="text"
+                name="message"
+                placeholder="I indeed liked your awesom work"
+              />
+            </div>
+            <div class="submit">
+              <input type="submit" value="Submit &rarr;" />
+            </div>
+            <div class="contact-group emailus">
+              <p class="label">email us</p>
+              <p class="email">business@abstruseArchet.com</p>
+            </div>
+            <ul class="socials">
+              <li><a href="">twitter</a></li>
+              <li><a href="">instagram</a></li>
+              <li><a href="">facebook</a></li>
+            </ul>
+          </form>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="logo">
+          <div class="logo-shape">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+        </div>
+        <ul>
+          <li><a href="">Platform</a></li>
+          <li><a href="">Help Center</a></li>
+          <li><a href="">Services</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Customers</a></li>
+          <li><a href="">Use Cases</a></li>
+          <li><a href="">Customer Stories</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Company</a></li>
+          <li><a href="">About</a></li>
+          <li>
+            <a href="">Careers</a>
+          </li>
+        </ul>
+      </div>
+      <p>&#169; Made Passionately by <a href="">Oussama BOUIZGARNE</a></p>
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </body>
+</html>

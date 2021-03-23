@@ -1,0 +1,38 @@
+hr.section-seperator {
+  width: 15%;
+  margin: 7rem auto;
+  border: none;
+  border-top: 1.5rem dotted rgba($color-lightBeige, 0.8);
+}
+
+/* BRAND LOGO */
+.logo {
+  &-shape {
+    transform: translateY(35%) rotate(-90deg);
+    display: flex;
+    align-items: center;
+    padding: 4.5rem;
+    @include respond(768px) {
+      transform: translateY(35%) scale(1.5) rotate(-90deg);
+    }
+
+    .shape {
+      height: 2.2rem;
+      width: 2.2rem;
+      outline: 0.1rem solid rgba($color-darkBlue, 0.8);
+      outline-offset: 0.3rem;
+      transform: rotate(45deg);
+      margin-left: -1rem;
+      background: $color-lightSilver;
+      border-left: 0.1rem solid royalblue;
+      border-bottom: 0.1rem solid royalblue;
+      @include respond(320px) {
+        height: 3.2rem;
+        width: 3.2rem;
+      }
+      &-1 {
+        margin-left: 5rem;
+      }
+    }
+  }
+}

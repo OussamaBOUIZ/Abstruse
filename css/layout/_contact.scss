@@ -1,0 +1,274 @@
+section#contact {
+  // border-top: 2px solid $color-lightBeige;
+  // height: 100vh;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-lightBrown, 0.5),
+    rgba($color-blueSilver, 0.5)
+  );
+  padding: 2rem;
+  @include respond(768px) {
+    height: auto;
+  }
+  article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 60rem;
+    // height: 100%;
+    @include respond(768px) {
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr;
+    }
+
+    figure {
+      background: $color-lightBeige;
+      @include respond(768px) {
+        text-align: center;
+      }
+      h1 {
+        font-size: 6rem;
+        margin: 8rem;
+        font-family: $font-libre;
+        @include respond(768px) {
+          font-size: 7.5rem;
+          margin: 4rem;
+        }
+        @include respond(432px) {
+          font-size: 11rem;
+        }
+        @include respond(320px) {
+          font-size: 13rem;
+        }
+      }
+      div.art {
+        display: flex;
+        margin-left: 5rem;
+        transform: translateX(7rem);
+        @include respond(768px) {
+          transform: translateY(7rem);
+          margin: 0 30rem;
+        }
+        @include respond(432px) {
+          transform: scale(1.5rem) translateY(7rem);
+          margin: 0 36rem;
+        }
+        div {
+          height: 20rem;
+          width: 20rem;
+          background-color: transparent;
+          border: 0.2rem solid $color-Blue;
+          border-radius: 50%;
+          margin-left: -5rem;
+          &.dashed {
+            border-style: dashed;
+          }
+        }
+      }
+    }
+    form {
+      font-family: $font-secondary;
+      background-color: #fff;
+      font-size: 1.6rem;
+      padding: 5rem;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, 1fr) 0.6fr;
+      // grid-gap: 2rem;
+      grid-row-gap: 2rem;
+      grid-column-gap: 3rem;
+      grid-template-areas:
+        "contact    contact"
+        "firstName lastName"
+        "email     phone"
+        "message message"
+        "submit      ."
+        "emailus  emailus"
+        "socials  socials";
+      @include respond(768px) {
+        padding: 5rem 5rem 0;
+      }
+      @include respond(432px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 155vw;
+      }
+      input,
+      label {
+        font-family: inherit;
+        font-size: inherit;
+        display: block;
+      }
+      label {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        @include respond(768px) {
+          font-size: 2.2rem;
+        }
+        @include respond(600px) {
+          font-size: 3.2rem;
+        }
+        @include respond(432px) {
+          font-size: 4.5rem;
+        }
+        @include respond(320px) {
+          font-size: 5rem;
+        }
+      }
+      input {
+        border: none;
+        padding: 1rem 0 0.5rem;
+        width: 100%;
+        outline: 0;
+        transition: all 0.4s;
+        border-bottom: 0.2rem solid #99a;
+        @include respond(600px) {
+          padding: 2rem 0;
+          font-size: 3rem;
+        }
+        @include respond(432px) {
+          font-size: 4.2rem;
+        }
+        &::placeholder {
+          font-size: 1.4rem;
+          color: rgba(153, 153, 170, 0.575);
+          @include respond(768px) {
+            font-size: 2.4rem;
+          }
+          @include respond(600px) {
+            font-size: 3.4rem;
+          }
+          @include respond(432px) {
+            font-size: 4.2rem;
+          }
+          @include respond(320px) {
+            font-size: 5rem;
+          }
+        }
+        &:focus {
+          border-bottom-color: #000;
+        }
+      }
+      h2 {
+        grid-area: contact;
+        font-size: 4.5rem;
+        font-family: $font-libre;
+        margin-bottom: 6rem;
+        @include respond(768px) {
+          font-size: 6.5rem;
+        }
+        @include respond(600px) {
+          font-size: 7.5rem;
+        }
+        @include respond(432px) {
+          font-size: 12rem;
+        }
+        @include respond(320px) {
+          font-size: 14rem;
+        }
+      }
+      div {
+        &.first-name {
+          grid-area: firstName;
+        }
+        &.last-name {
+          grid-area: lastName;
+        }
+        &.email {
+          grid-area: email;
+        }
+        &.phone {
+          grid-area: phone;
+        }
+        &.message {
+          grid-area: message;
+          //   input {
+          // width: 100%;
+          //   }/
+        }
+        &.submit {
+          grid-area: submit;
+          padding: 1rem 0;
+          input {
+            width: 65%;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            @include respond(768px) {
+              font-size: 2.8rem;
+            }
+            @include respond(600px) {
+              font-size: 5rem;
+            }
+            @include respond(432px) {
+              display: block;
+              font-size: 5rem;
+              width: 100%;
+              padding: 3rem;
+            }
+            &:hover {
+              background-color: rgba(153, 153, 170, 0.527);
+            }
+          }
+        }
+        &.emailus {
+          grid-area: emailus;
+          padding: 1rem 0;
+          @include respond(432px) {
+            text-align: center;
+          }
+          p.label {
+            text-transform: uppercase;
+            color: grey;
+            margin-bottom: 0.5rem;
+            @include respond(768px) {
+              font-size: 2.6rem;
+            }
+            @include respond(600px) {
+              font-size: 3rem;
+            }
+            @include respond(432px) {
+              font-size: 4.6rem;
+            }
+          }
+          p.email {
+            font-size: 1.5rem;
+            @include respond(768px) {
+              font-size: 2.4rem;
+            }
+            @include respond(600px) {
+              font-size: 2.8rem;
+            }
+            @include respond(432px) {
+              font-size: 4.8rem;
+            }
+          }
+        }
+      }
+      ul.socials {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 8rem;
+        grid-area: socials;
+        @include respond(432px) {
+          padding: 4rem;
+        }
+        a {
+          text-transform: uppercase;
+          font-size: 1.1rem;
+          color: $color-blueSilver;
+          @include respond(768px) {
+            font-size: 2rem;
+          }
+          @include respond(432px) {
+            font-size: 3.5rem;
+          }
+        }
+      }
+    }
+  }
+}

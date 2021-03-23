@@ -1,0 +1,95 @@
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  50% {
+    opacity: 0.1;
+    transform: translateX(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  50% {
+    opacity: 0.1;
+    transform: translateX(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(135%);
+  }
+  50% {
+    opacity: 0.1;
+    transform: translateY(80%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes moveUpHeadingBtn {
+  from {
+    opacity: 0;
+    transform: translateY(180%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes projectAppear {
+  0% {
+    opacity: 0;
+    transform: translatey(-20%) /*scale(0.9)*/;
+  }
+  50% {
+    opacity: 0.2;
+    transform: translateY(-3%);
+  }
+  100% {
+    opaciy: 1;
+    transform: translateY(0) /*scale(1)*/;
+  }
+}
+@keyframes arrowVisible {
+  0% {
+    opacity: 0;
+    transform: translate(-80%, 20%) /*scale(0.9)*/;
+  }
+  50% {
+    opacity: 0.1;
+    transform: translate(0%, 20%);
+  }
+  100% {
+    opaciy: 1;
+    transform: translate(75%, 20%) /*scale(1)*/;
+  }
+}
+
+.block {
+  display: block !important;
+  animation: projectAppear 0.3s ease-in;
+}
+.emphasize {
+  color: rgba($color-darkBlue, 0.9) !important;
+  // transform: scale(1.05);
+}
+.show-icon {
+  animation: arrowVisible 0.4s ease-in-out;
+  visibility: visible !important;
+}

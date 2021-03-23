@@ -1,0 +1,251 @@
+section#projects {
+  min-height: 100vh;
+  @include respond(768px) {
+    min-height: 64rem;
+  }
+  display: grid;
+  grid-template-columns: 30% 20% 1fr;
+
+  @include respond(768px) {
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 15% 1fr;
+    grid-template-areas:
+      "aside titles"
+      " aside  details";
+  }
+  @include respond(600px) {
+    // grid-template-columns: 1fr;
+    // grid-template-rows: 30% 20% 50%;
+    // grid-template-areas:
+    //   "aside"
+    //   "titles"
+    //   "details";
+    display: block;
+  }
+  aside {
+    padding: 5rem;
+    position: relative;
+    @include respond(768px) {
+      grid-area: aside;
+    }
+    h1 {
+      font-size: 7rem;
+      font-family: $font-libre;
+      font-weight: 400;
+      color: rgba($color-darkBlue, 0.85);
+      @include respond(768px) {
+        font-size: 10rem;
+      }
+      @include respond(600px) {
+        font-size: 12rem;
+        text-align: center;
+      }
+      @include respond(432px) {
+        font-size: 16rem;
+      }
+      @include respond(320px) {
+        font-size: 21rem;
+      }
+    }
+    .logo {
+      transform: scale(9) translateX(-5%);
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      opacity: 0.1;
+      z-index: -1;
+      @include respond(768px) {
+        transform: scale(6) translate(-8%, 11%);
+      }
+      @include respond(600px) {
+        opacity: 0.05;
+        transform: scale(6) translate(-8%, 45%);
+      }
+    }
+  }
+  ul {
+    background: linear-gradient(
+      to bottom,
+      rgba($color-blueSilver, 0),
+      rgba($color-blueSilver, 0.5)
+    );
+    padding: 2rem;
+    @include respond(768px) {
+      grid-area: titles; //This is valid when we are below 768px breakpoint
+      display: flex;
+      justify-content: space-around;
+      background: rgba($color-blueSilver, 0.3);
+    }
+    @include respond(600px) {
+      background: rgba($color-blueSilver, 0.5);
+    }
+    li {
+      color: rgba($color-smokeGrey, 0.5);
+      font-family: $font-primary;
+      font-size: 2rem;
+      margin: 2rem;
+      margin-bottom: 3rem;
+      font-weight: 300;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: all 0.3s;
+      @include respond(768px) {
+        font-size: 2.3rem;
+      }
+      @include respond(600px) {
+        font-size: 3rem;
+      }
+      @include respond(432px) {
+        font-size: 4.5rem;
+      }
+      @include respond(320px) {
+        font-size: 5rem;
+      }
+      &.active-name {
+        color: $color-smokeGrey;
+        font-size: 2.2rem;
+        opacity: 1;
+        @include respond(768px) {
+          font-size: 3.5rem;
+        }
+        @include respond(432px) {
+          font-size: 5rem;
+        }
+        @include respond(320px) {
+          font-size: 6rem;
+        }
+      }
+      &:hover {
+        color: rgba($color-darkBlue, 0.7);
+      }
+      ion-icon {
+        transform: translateY(0.5rem);
+        visibility: hidden;
+        @include respond(768px) {
+          display: none;
+        }
+        &.active-arrow {
+          visibility: visible;
+        }
+      }
+    }
+  }
+  figure {
+    @include respond(768px) {
+      grid-area: details;
+    }
+    article {
+      background-image: linear-gradient(
+        to left top,
+        $color-lightBeige,
+        rgba($color-lightBeige, 0)
+      );
+      padding: 3rem 4rem 4rem;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.3s;
+      // For dynamic effect we'll set all article to display: none; and then make a class that modifies this to display: block;
+      display: none;
+      &.active-article {
+        display: block;
+        opacity: 1;
+      }
+      address {
+        display: flex;
+        align-items: center;
+        img {
+          width: 10rem;
+          height: 10rem;
+          box-shadow: 0 3.5rem 2.2rem rgba($black, 0.15);
+          border-radius: 50%;
+          margin: 1.5rem 2rem;
+          @include respond(768px) {
+            width: 14.5rem;
+            height: 14.5rem;
+          }
+          @include respond(600px) {
+            width: 17rem;
+            height: 17rem;
+          }
+          @include respond(432px) {
+            width: 28rem;
+            height: 28rem;
+          }
+          @include respond(320px) {
+            width: 37rem;
+            height: 37rem;
+          }
+        }
+        div {
+          h4 {
+            font-family: $font-primary;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 0.8rem;
+            @include respond(768px) {
+              font-size: 3rem;
+            }
+            @include respond(600px) {
+              font-size: 4rem;
+            }
+            @include respond(432px) {
+              font-size: 6rem;
+            }
+            @include respond(320px) {
+              font-size: 8rem;
+            }
+          }
+          span {
+            font-family: $font-open;
+            font-size: 1.4rem;
+            @include respond(768px) {
+              font-size: 2.4rem;
+            }
+            @include respond(600px) {
+              font-size: 3rem;
+            }
+            @include respond(432px) {
+              font-size: 4.5rem;
+            }
+            @include respond(320px) {
+              font-size: 6.5rem;
+            }
+            ion-icon {
+              font-size: 1.7rem;
+              margin-right: 0.5rem;
+              @include respond(768px) {
+                font-size: 2.7rem;
+              }
+              @include respond(600px) {
+                font-size: 3.2rem;
+              }
+              @include respond(432px) {
+                font-size: 5rem;
+              }
+            }
+          }
+        }
+      }
+      p {
+        margin-top: 2rem;
+        font-size: 1.7rem;
+        font-weight: 300;
+        font-family: $font-secondary;
+        line-height: 2.25;
+        text-align: justify;
+        @include respond(768px) {
+          font-size: 2.6rem;
+        }
+        @include respond(600px) {
+          font-size: 3.6rem;
+        }
+        @include respond(432px) {
+          font-size: 5.8rem;
+        }
+        @include respond(320px) {
+          font-size: 7rem;
+        }
+      }
+    }
+  }
+}

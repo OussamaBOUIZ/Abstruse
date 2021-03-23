@@ -1,0 +1,278 @@
+.main {
+  //   padding: 5rem;
+
+  .about {
+    display: flex;
+    padding: 5rem 8rem;
+    @include respond(768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-box-1 {
+      width: 50%;
+      padding: 3rem;
+      & > * {
+        margin-bottom: 3rem;
+      }
+      @include respond(768px) {
+        width: auto;
+      }
+      .title {
+        font-family: $font-open;
+        font-weight: 400;
+        font-size: 2.9rem;
+        color: rgba($color-royalBlue, 0.7);
+        margin-left: 3rem;
+        @include respond(600px) {
+          font-size: 5rem;
+        }
+        @include respond(432px) {
+          font-size: 7rem;
+        }
+        @include respond(432px) {
+          font-size: 10rem;
+        }
+        &::before {
+          content: "";
+          display: inline-block;
+          height: 0.18rem;
+          width: 5rem;
+          margin-right: 0.4rem;
+          background-color: rgba($color-royalBlue, 0.7);
+          margin-bottom: 0.9rem;
+        }
+        &-sub {
+          font-family: $font-primary;
+          font-size: 4.3rem;
+          color: rgba($color-darkBlue, 0.8);
+          @include respond(600px) {
+            font-size: 6rem;
+          }
+          @include respond(432px) {
+            font-size: 8rem;
+          }
+          @include respond(320px) {
+            font-size: 11rem;
+          }
+        }
+      }
+      .paragraph {
+        font-family: $font-primary;
+        font-size: 1.7rem;
+        width: 45rem;
+        line-height: 1.7;
+        color: rgba($color-smokeGrey, 0.99);
+        @include respond(768px) {
+          width: auto;
+          font-size: 2.7rem;
+        }
+        @include respond(600px) {
+          font-size: 3rem;
+        }
+        @include respond(432px) {
+          font-size: 5rem;
+        }
+        @include respond(320px) {
+          font-size: 7rem;
+        }
+      }
+      &-btn {
+        &,
+        &:link,
+        &:visited {
+          border: none;
+          padding: 1.3rem 1.6rem;
+          font-family: $font-secondary;
+          font-size: 1.6rem;
+          // border-radius: 10rem;
+          outline: none;
+          cursor: pointer;
+          color: $white;
+          background: linear-gradient(
+            to right bottom,
+            rgba($color-royalBlue, 1),
+            rgba($color-royalBlue, 0.5)
+          );
+          box-shadow: 0 3rem 3rem rgba($color-royalBlue, 0.2);
+          transition: all 0.5s;
+          @include respond(768px) {
+            font-size: 2.6rem;
+          }
+          @include respond(600px) {
+            font-size: 2.8rem;
+          }
+          @include respond(432px) {
+            font-size: 4rem;
+          }
+          @include respond(320px) {
+            font-size: 6rem;
+          }
+        }
+        &:hover {
+          background: linear-gradient(
+            to right top,
+            rgba($color-royalBlue, 1),
+            rgba($color-royalBlue, 0.7)
+          );
+        }
+        &:active {
+          box-shadow: 0 1.5rem 3rem rgba($color-royalBlue, 0.6);
+          transform: translateY(0.5rem);
+        }
+      }
+    }
+    &-box-2 {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      margin-left: 3rem;
+      padding: 3rem 0rem;
+      @include respond(768px) {
+        width: auto;
+      }
+      @include respond(320px) {
+        margin-left: 0;
+      }
+      .img {
+        border-radius: 0.9rem;
+        margin-bottom: 2.8rem;
+        margin-left: 1.7rem;
+        border: 0.6rem solid $white;
+        box-shadow: -0.3rem 3rem 3rem rgba($color-royalBlue, 0.2);
+        background-size: cover;
+      }
+      .item {
+        &-1 {
+          height: 29rem;
+          width: 30rem;
+          background-image: url("../img/arch-1-large.jpg");
+        }
+        &-2 {
+          display: flex;
+          flex-direction: column;
+
+          &--1 {
+            height: 18rem;
+            width: 20rem;
+            background-image: url("../img/arch-2-large.jpg");
+          }
+          &--2 {
+            height: 18rem;
+            width: 20rem;
+            background-image: url("../img/arch-3-large.jpg");
+          }
+          &--1,
+          &--2 {
+            @include respond(768px) {
+              width: 30rem;
+              height: 30rem;
+            }
+            @include respond(600px) {
+              width: 40rem;
+              height: 40rem;
+            }
+            @include respond(432px) {
+              width: 33rem;
+              height: 33rem;
+            }
+            @include respond(320px) {
+              width: 44rem;
+              height: 44rem;
+            }
+          }
+        }
+        &-3 {
+          height: 29rem;
+          width: 30rem;
+          background-image: url("../img/arch-4-large.jpg");
+          background-position-x: 48%;
+        }
+        &-1,
+        &-3 {
+          @include respond(768px) {
+            height: 46rem;
+          }
+          @include respond(600px) {
+            height: 60rem;
+            width: 40rem;
+          }
+          @include respond(432px) {
+            width: 34rem;
+            height: 54rem;
+          }
+          @include respond(320px) {
+            width: 42rem;
+            height: 90rem;
+          }
+        }
+      }
+    }
+  }
+}
+///THE PROJECTS SECTION
+///////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+//THE SERVICES SECTION
+.services {
+  padding: 6rem 9rem;
+
+  // url("../img/services-large.jpg");
+  // transform: skewY(-5deg) ;
+  // background-size: cover;
+  &-heading {
+    color: $color-blueSilver;
+    text-transform: uppercase;
+    font-family: $font-open;
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 6rem;
+  }
+  &-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // transform: skewY(5deg);
+  }
+
+  &-card {
+    backface-visibility: hidden;
+    border: 0.6rem solid $white;
+    box-shadow: -0.3rem 3rem 3rem rgba($color-royalBlue, 0.2);
+    border-radius: 1rem;
+
+    background-color: rgba($color-lightBeige, 0.3);
+    color: $color-royalBlue;
+    backdrop-filter: blur(0.4rem);
+    padding: 2rem;
+    margin: 2rem;
+    width: 25%;
+    transition: all 0.3s;
+    &:hover {
+      transform: translateY(-5%) scale(1.01);
+    }
+    &__sign {
+      text-align: center;
+      &-icon {
+        color: $color-blueSilver;
+        font-size: 5.7rem;
+      }
+    }
+    &__heading {
+      font-family: $font-primary;
+      font-size: 2rem;
+      text-align: center;
+      margin: 1rem;
+      color: $color-blueSilver;
+    }
+    &__text {
+      text-align: center;
+      padding: 3rem;
+      font-family: $font-secondary;
+      font-size: 1.6rem;
+      color: $color-smokeGrey;
+    }
+  }
+}
+///////////////////////////////////////////////////
+// THE PROJECTS SECTION

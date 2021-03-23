@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* WE'D RATHER CONVERT THIS SIZES TO THE (em) UNIT. */
+html {
+  font-size: 62.5%;
+  @include respond(1024px) {
+    font-size: 47.5%;
+  }
+  @include respond(1003px) {
+    font-size: 46.5%;
+  }
+  @include respond(982px) {
+    font-size: 45.6%;
+  }
+  @include respond(963px) {
+    font-size: 44.7%;
+  }
+  @include respond(914px) {
+    font-size: 42.5%;
+  }
+  @include respond(882px) {
+    font-size: 41%;
+  }
+  @include respond(832px) {
+    font-size: 38.6%;
+  }
+  @include respond(790px) {
+    font-size: 36.5%;
+  }
+  @include respond(768px) {
+    font-size: 35.6%;
+  }
+  @include respond(720px) {
+    font-size: 33.4%;
+  }
+  @include respond(600px) {
+    font-size: 27.8%;
+  }
+  @include respond(432px) {
+    font-size: 20%;
+  }
+  @include respond(428px) {
+    font-size: 19.8%;
+  }
+  @include respond(414px) {
+    font-size: 19.23%;
+  }
+  @include respond(412px) {
+    font-size: 19.14%;
+  }
+  @include respond(375px) {
+    font-size: 17.42%;
+  }
+  @include respond(360px) {
+    font-size: 16.72%;
+  }
+  @include respond(320px) {
+    font-size: 14.8%;
+  }
+}
+body {
+  box-sizing: border-box;
+  background: linear-gradient(
+    to left top,
+    rgba($color-lightBeige, 0.3),
+    rgba($color-lightBeige, 0)
+  );
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}

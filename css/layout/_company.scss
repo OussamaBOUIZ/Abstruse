@@ -1,0 +1,183 @@
+section#company {
+  height: 100vh;
+  background-image: url("../img/webb.png"),
+    linear-gradient(
+      to bottom,
+      rgba($color-lightBeige, 0.1),
+      rgba($color-lightBeige, 0.8)
+    );
+  padding: 4rem;
+  @include respond(768px) {
+    height: auto;
+  }
+  @include respond(432px) {
+    padding: 0;
+  }
+  article.company__stats {
+    height: 40%;
+    padding: 5rem;
+    padding-bottom: 3rem;
+    ul {
+      list-style: none;
+      // display: flex;
+      // justify-content: space-around;
+      // align-items: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+      font-family: $font-primary;
+      li {
+        padding: 1rem;
+        text-align: center;
+        @include respond(600px) {
+          padding: 4rem;
+        }
+        @include respond(432px) {
+          padding: 7rem 4rem;
+          margin-bottom: 6rem;
+        }
+        strong {
+          font-size: 5rem;
+          color: $color-Blue;
+          @include respond(768px) {
+            font-size: 7rem;
+          }
+          @include respond(432px) {
+            font-size: 14rem;
+          }
+          @include respond(320px) {
+            font-size: 23rem;
+          }
+        }
+        span {
+          font-size: 1.1rem;
+          color: rgba($color-Blue, 0.7);
+          text-transform: uppercase;
+          @include respond(768px) {
+            font-size: 2rem;
+          }
+          @include respond(600px) {
+            font-size: 2.8rem;
+          }
+          @include respond(432px) {
+            font-size: 4rem;
+          }
+          @include respond(320px) {
+            font-size: 6rem;
+          }
+          &.projects {
+            margin-left: 10%;
+            //the problem here is that the span doesn't look centered compared to the strong element so adding a left margin fix this.
+            @include respond(432px) {
+              margin: 0;
+            }
+          }
+          ion-icon {
+            font-size: 3rem;
+            margin-left: inherit;
+            color: $color-Blue;
+            margin-top: 1rem;
+            @include respond(768px) {
+              font-size: 4rem;
+            }
+            @include respond(600px) {
+              font-size: 6rem;
+            }
+            @include respond(432px) {
+              font-size: 9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  article.company__explore {
+    height: 60%;
+    text-align: center;
+    color: $color-darkBlue;
+    font-family: $font-primary;
+    padding: 5rem 20rem;
+    background-color: cadetblue;
+    background-image: url("../img/whitebg-s.jpg")
+      /* ,
+      linear-gradient(to bottom, $color-lightBeige, rgba($white, 0.8)) */;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    @include respond(600px) {
+      padding: 5rem;
+    }
+    & > * {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-size: 3.5rem;
+      word-spacing: 1rem;
+      color: $color-royalBlue;
+      @include respond(768px) {
+        font-size: 5rem;
+      }
+      @include respond(600px) {
+        font-size: 5.5rem;
+      }
+      @include respond(432px) {
+        font-size: 7.5rem;
+      }
+      @include respond(320px) {
+        font-size: 11rem;
+      }
+      span {
+        font-size: 4rem;
+        color: $color-Blue;
+        @include respond(768px) {
+          font-size: 6rem;
+        }
+        @include respond(432px) {
+          font-size: 8rem;
+        }
+        @include respond(320px) {
+          font-size: 12rem;
+        }
+      }
+    }
+    p {
+      font-size: 1.6rem;
+      @include respond(768px) {
+        font-size: 2.4rem;
+      }
+      @include respond(600px) {
+        font-size: 2.6rem;
+      }
+      @include respond(432px) {
+        font-size: 4.2rem;
+      }
+      @include respond(320px) {
+        font-size: 6.2rem;
+      }
+    }
+    button {
+      border: none;
+      background-color: $color-royalBlue;
+      color: #fff;
+      padding: 1rem 2.5rem;
+      transition: all 0.3s;
+      font-family: inherit;
+      font-size: 2rem;
+      cursor: pointer;
+      @include respond(768px) {
+        font-size: 3rem;
+      }
+      @include respond(600px) {
+        font-size: 4rem;
+      }
+      @include respond(432px) {
+        font-size: 5rem;
+      }
+      @include respond(320px) {
+        font-size: 7rem;
+      }
+      &:hover {
+        background-color: rgba($color-royalBlue, 0.8);
+      }
+    }
+  }
+}
