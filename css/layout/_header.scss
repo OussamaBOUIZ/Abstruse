@@ -102,6 +102,7 @@ header.header {
       font-family: $font-primary;
       letter-spacing: 0.2rem;
       color: rgba($color-darkBlue, 0.8);
+
       @include respond(768px) {
         font-size: 10rem;
       }
