@@ -855,7 +855,7 @@ footer .footer ul li a {
 }
 @media (max-width: 320px) {
   footer .footer ul li a {
-    font-size: 7rem;
+    font-size: 10rem;
   }
 }
 footer .footer ul li a:hover {

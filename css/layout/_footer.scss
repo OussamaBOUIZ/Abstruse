@@ -44,7 +44,7 @@ footer {
             font-size: 3.5rem;
           }
           @include respond(320px) {
-            font-size: 7rem;
+            font-size: 10rem;
           }
           &:hover {
             color: rgba($color-lightBrown, 0.7);
