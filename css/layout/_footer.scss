@@ -43,7 +43,7 @@ footer {
           @include respond(600px) {
             font-size: 3.5rem;
           }
-          @include respond(320px) {
+          @include respond(360px) {
             font-size: 10rem;
           }
           &:hover {

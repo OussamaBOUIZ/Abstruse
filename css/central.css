@@ -853,7 +853,7 @@ footer .footer ul li a {
     font-size: 3.5rem;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   footer .footer ul li a {
     font-size: 10rem;
   }
