@@ -395,7 +395,6 @@ header.header .mainOfHeader .main-heading {
   font-size: 7rem;
   font-family: "Merriweather Sans", sans-serif;
   letter-spacing: 0.2rem;
-  color: rgba(11, 15, 20, 0.3);
   color: rgba(11, 15, 20, 0.8);
 }
 @media (max-width: 768px) {
