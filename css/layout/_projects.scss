@@ -1,5 +1,9 @@
 section#projects {
   min-height: 100vh;
+
+  & > * {
+    transition: all 0.7s ease-out;
+  }
   @include respond(768px) {
     min-height: 64rem;
   }

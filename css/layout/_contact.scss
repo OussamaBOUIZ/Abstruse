@@ -1,6 +1,4 @@
 section#contact {
-  // border-top: 2px solid $color-lightBeige;
-  // height: 100vh;
   height: 100vh;
   background-image: linear-gradient(
     to right bottom,
@@ -23,6 +21,8 @@ section#contact {
 
     figure {
       background: $color-lightBeige;
+      transition: all 0.7s ease-out;
+
       @include respond(768px) {
         text-align: center;
       }
@@ -67,6 +67,8 @@ section#contact {
       }
     }
     form {
+      transition: all 0.7s ease-out;
+
       font-family: $font-secondary;
       background-color: #fff;
       font-size: 1.6rem;

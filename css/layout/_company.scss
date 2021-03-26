@@ -28,6 +28,7 @@ section#company {
       li {
         padding: 1rem;
         text-align: center;
+        transition: all 0.8s ease-in-out;
         @include respond(600px) {
           padding: 4rem;
         }
@@ -91,6 +92,7 @@ section#company {
     }
   }
   article.company__explore {
+    transition: all 1s;
     height: 60%;
     text-align: center;
     color: $color-darkBlue;

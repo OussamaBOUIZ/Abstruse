@@ -2,6 +2,9 @@ footer {
   background-color: rgba($color-lightBrown, 0.5);
   padding: 5rem 6rem 0;
   color: $color-Blue;
+  & > * {
+    transition: all 0.8s ease-out;
+  }
   @include respond(768px) {
     padding: 10rem 8rem 0;
   }
