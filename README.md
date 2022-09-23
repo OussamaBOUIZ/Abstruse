@@ -1,4 +1,4 @@
-# Building project
+#Abstruse project
 
 This webpage is built with simple HTML, CSS & JS.
 [<ins>See the Web page</ins>](https://abstruse.netlify.app/)
